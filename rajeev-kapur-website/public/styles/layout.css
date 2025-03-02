@@ -1,0 +1,131 @@
+/* Main Content */
+.container {
+  max-width: 1200px;
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 25px;
+  box-shadow: 0 0 40px rgba(255, 64, 129, 0.3);
+}
+
+h1 {
+  font-size: 6em;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  background: linear-gradient(90deg, #ff4081, #7c4dff, #00e5ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  /* text-shadow: 0 0 25px rgba(255, 64, 129, 0.8), 0 0 50px rgba(124, 77, 255, 0.6); */
+  animation: glowShift 4s infinite;
+}
+
+@keyframes glowShift {
+  0% {
+    filter: drop-shadow(0 0 25px rgba(255, 64, 129, 0.8));
+  }
+
+  50% {
+    filter: drop-shadow(0 0 35px rgba(124, 77, 255, 0.8));
+  }
+
+  100% {
+    filter: drop-shadow(0 0 25px rgba(0, 229, 255, 0.8));
+  }
+}
+
+p {
+  font-size: 1.8em;
+  line-height: 1.5;
+  margin: 40px 0;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+  animation: fadeIn 2s ease-out;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 20px 60px;
+  background: linear-gradient(135deg, #ff4081, #7c4dff);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 60px;
+  font-size: 1.6em;
+  font-weight: bold;
+  box-shadow: 0 0 30px rgba(255, 64, 129, 0.7);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.cta-btn:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
+.cta-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 50px rgba(124, 77, 255, 0.9);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Font Sizes */
+h1 {
+  font-size: 6em;
+  /* Default font size for larger screens */
+}
+
+p {
+  font-size: 1.8em;
+  /* Default font size for larger screens */
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 4em;
+    /* Adjust font size for tablets */
+  }
+
+  p {
+    font-size: 1.4em;
+    /* Adjust font size for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 3em;
+    /* Adjust font size for mobile phones */
+  }
+
+  p {
+    font-size: 1.2em;
+    /* Adjust font size for mobile phones */
+  }
+}
