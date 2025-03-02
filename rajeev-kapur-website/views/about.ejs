@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Rajeev Kapur</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="sr-only">Toggle Navigation</label>
+  <label for="menu-toggle" class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <%- include('nav.ejs') %>  
+
+  <div class="circuit"></div>
+  <div class="nodes">
+    <div class="node"></div>
+    <div class="node"></div>
+    <div class="node"></div>
+    <div class="node"></div>
+    <div class="node"></div>
+  </div>
+  <div class="container">
+    <h1>About Me</h1>
+    <p>I am a passionate software engineer with over 10 years of experience in developing robust and scalable applications. My expertise lies in full-stack development, cloud computing, and system architecture.</p>
+    <p>I believe in continuous learning and staying up-to-date with the latest technologies. My goal is to create impactful solutions that solve real-world problems.</p>
+    <p>When I'm not coding, I enjoy hiking, reading, and exploring new technologies.</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
