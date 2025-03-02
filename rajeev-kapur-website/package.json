@@ -1,0 +1,12 @@
+{
+  "name": "rajeev-kapur-website",
+  "version": "1.0.0",
+  "description": "Rajeev Kapur Software Engineer Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
